@@ -29,7 +29,7 @@ const teamData = {
     },
     sara: {
         name: 'Sara Neff',
-        description: 'This is Sara Neff\'s description',
+        description: 'Sara Neff is the Director of TheNewConcrete.fund. She is a recognized leader in sustainable real estate and institutional climate finance, with deep expertise in driving decarbonization strategies across complex organizations. She advises climate-focused initiatives, contributes to industry boards, and is actively involved in advancing innovative solutions that accelerate the transition to a low-carbon economy.',
         linkedin: 'https://www.linkedin.com/in/sara-neff-4490b214/'
     }
 };
