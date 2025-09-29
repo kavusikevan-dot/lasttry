@@ -301,7 +301,7 @@ body {
 }
 
 .logo-section {
-    grid-column: 2 / -1;
+    grid-column: 2 / 4;
     margin-top: 40px;
     text-align: center;
 }
