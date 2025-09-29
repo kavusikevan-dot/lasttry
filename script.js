@@ -77,7 +77,7 @@ document.querySelector('.newsletter-btn').addEventListener('click', (e) => {
 });
 
 // Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(#modal-linkedin)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
