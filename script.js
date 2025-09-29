@@ -25,12 +25,12 @@ const teamData = {
     diane: {
         name: 'Diane Schrader',
         description: 'This is Diane Schrader\'s description',
-        linkedin: 'https://linkedin.com/in/dianeschrader'
+        linkedin: 'https://www.linkedin.com/in/diane-schrader/'
     },
     sara: {
         name: 'Sara Neff',
         description: 'This is Sara Neff\'s description',
-        linkedin: 'https://linkedin.com/in/saraneff'
+        linkedin: 'https://www.linkedin.com/in/sara-neff-4490b214/'
     }
 };
 
@@ -67,12 +67,17 @@ document.addEventListener('keydown', (event) => {
 // Newsletter subscription
 document.querySelector('.newsletter-btn').addEventListener('click', (e) => {
     e.preventDefault();
-    const email = document.querySelector('.newsletter-input').value;
-    if (email) {
+    const firstName = document.querySelectorAll('.newsletter-input')[0].value;
+    const lastName = document.querySelector('.newsletter-lastname').value;
+    const email = document.querySelectorAll('.newsletter-input')[1].value;
+    
+    if (firstName && lastName && email) {
         alert('Thank you for subscribing! We\'ll be in touch soon.');
-        document.querySelector('.newsletter-input').value = '';
+        document.querySelectorAll('.newsletter-input')[0].value = '';
+        document.querySelector('.newsletter-lastname').value = '';
+        document.querySelectorAll('.newsletter-input')[1].value = '';
     } else {
-        alert('Please enter a valid email address.');
+        alert('Please fill in all required fields.');
     }
 });
 
