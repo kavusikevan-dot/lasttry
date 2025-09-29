@@ -282,33 +282,27 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px 40px;
     margin-bottom: 40px;
 }
 
 .newsletter-section {
-    min-width: 400px;
+    grid-column: 1;
 }
 
-.logo-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px 40px;
-}
 
 .contact-section {
-    min-width: 200px;
+    grid-column: 2;
 }
 
 .social-section {
-    min-width: 200px;
+    grid-column: 3;
 }
 
-.footer-logo {
-    grid-column: 1 / -1;
-    margin-top: 20px;
+.logo-section {
+    grid-column: 2 / -1;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -536,9 +530,11 @@ body {
         gap: 40px;
     }
     
+    .newsletter-section,
+    .contact-section,
+    .social-section,
     .logo-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-column: 1;
     }
     
     .newsletter-section {
