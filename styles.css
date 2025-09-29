@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
@@ -40,6 +40,26 @@ body {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.red-circle {
+    width: 40px;
+    height: 40px;
+    background-image: url('images/big red circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
 }
 
 .nav {
@@ -133,7 +153,7 @@ body {
 
 .hero-title {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: -2px;
 }
@@ -196,14 +216,14 @@ body {
 
 .member-info h3 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .member-title {
     font-size: 1.2rem;
     color: #ff4444;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* Company Description */
@@ -215,7 +235,7 @@ body {
 
 .description-content h2 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 30px;
     margin-top: 60px;
 }
@@ -257,7 +277,7 @@ body {
 
 .footer-section h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -306,7 +326,7 @@ body {
     color: #000000;
     border: none;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: flex;
@@ -345,7 +365,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     transition: background-color 0.3s ease;
 }
 
@@ -413,7 +433,7 @@ body {
 
 .modal-body h3 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -433,7 +453,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     transition: background-color 0.3s ease;
 }
 
