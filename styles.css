@@ -49,8 +49,8 @@ body {
 }
 
 .red-circle {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-image: url('images/big red circle.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -60,6 +60,18 @@ body {
 .logo-image {
     height: 40px;
     width: auto;
+}
+
+.hero-red-circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('images/big red circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2px;
+    vertical-align: baseline;
 }
 
 .nav {
