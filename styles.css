@@ -414,8 +414,8 @@ body {
 
 .footer-logo {
     margin-top: 0;
-    text-align: left;
-    grid-column: 1 / 0;
+    text-align: right;
+    grid-column: 1 / -1;
     text-align: center;
 }
 
