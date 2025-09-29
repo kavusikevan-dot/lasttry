@@ -241,18 +241,9 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
     margin-bottom: 40px;
-}
-
-.newsletter-section {
-    min-width: 400px;
-}
-
-.contact-section,
-.social-section {
-    min-width: 200px;
 }
 
 .footer-section h3 {
@@ -298,7 +289,7 @@ body {
 }
 
 .newsletter-btn:hover {
-    background-color: #ff4444;
+    background-color: #6bb6d6;
 }
 
 .newsletter-btn::after {
@@ -425,15 +416,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .newsletter-section {
-        min-width: auto;
-    }
-    
     .newsletter {
         grid-template-columns: 1fr;
         gap: 15px;
