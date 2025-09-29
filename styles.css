@@ -282,7 +282,7 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-bottom: 40px;
 }
@@ -291,7 +291,16 @@ body {
     min-width: 400px;
 }
 
-.contact-section,
+.logo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-section {
+    min-width: 200px;
+}
+
 .social-section {
     min-width: 200px;
 }
@@ -395,15 +404,19 @@ body {
 }
 
 .footer-logo {
-    margin-top: 30px;
+    margin-top: 0;
     text-align: left;
+    grid-column: 1 / -1;
+    text-align: center;
 }
 
 .footer-logo-image {
-    height: 30px;
+    height: 60px;
     width: auto;
     margin-bottom: 10px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-tagline {
@@ -411,6 +424,7 @@ body {
     color: #cccccc;
     font-weight: 300;
     line-height: 1.4;
+    text-align: center;
 }
 
 .footer-bottom {
@@ -505,6 +519,11 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    
+    .logo-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .newsletter-section {
