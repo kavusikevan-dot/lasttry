@@ -1,0 +1,13 @@
+{
+  "name": "the-new-climate",
+  "version": "1.0.0",
+  "description": "The New Climate website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 3000"
+  },
+  "keywords": ["climate", "website"],
+  "author": "",
+  "license": "ISC"
+}
