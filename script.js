@@ -81,6 +81,35 @@ document.querySelector('.newsletter-btn').addEventListener('click', (e) => {
     }
 });
 
+// Scroll animations
+function handleScrollAnimations() {
+    const teamMembers = document.querySelectorAll('.team-member');
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.pageYOffset;
+
+    teamMembers.forEach((member, index) => {
+        const elementTop = member.offsetTop;
+        const elementHeight = member.offsetHeight;
+        const elementBottom = elementTop + elementHeight;
+
+        // Trigger animation when element is 20% visible from bottom of viewport
+        if (scrollTop + windowHeight > elementTop + (elementHeight * 0.2)) {
+            // Add a slight delay for each member for staggered effect
+            setTimeout(() => {
+                member.classList.add('fade-in');
+            }, index * 200);
+        }
+    });
+}
+
+// Initialize scroll animations on page load
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimations();
+});
+
+// Handle scroll animations on scroll
+window.addEventListener('scroll', handleScrollAnimations);
+
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]:not(#modal-linkedin)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

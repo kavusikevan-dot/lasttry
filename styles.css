@@ -204,10 +204,18 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     max-width: 400px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.team-member.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
 }
 
 .member-image {
