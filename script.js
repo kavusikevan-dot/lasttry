@@ -24,7 +24,8 @@ const modalLinkedin = document.getElementById('modal-linkedin');
 const teamData = {
     diane: {
         name: 'Diane Schrader',
-        description: 'Diane Schrader is the CEO of TheNewClimate Inc. She is deeply engaged in institutional climate finance and is embedded in the climate startup ecosystem at Stanford. She advises startups, serves on several boards, and actively contributes to advancing renewable energy solutions, including hands-on work with solar installation.',
+        description: 'Diane Schrader is a financial engineer and a thought-leader in climate finance. As the co-founder of thirdACT PBC, she develops institutional portfolios of assets backed by real estate to enable the transition of every American home to all-electric, clean energy.',
+        fullDescription: 'Diane Schrader is a financial engineer and a thought-leader in climate finance. As the co-founder of thirdACT PBC, she develops institutional portfolios of assets backed by real estate to enable the transition of every American home to all-electric, clean energy. Her superpower is the Climate Salon, a global convening of the world\'s largest asset owners to accelerate investment in climate via the private markets. To amplify women in the world of finance, Diane launched the San Francisco chapter of 100 Women in Finance and quickly grew the chapter to be the third largest globally. She then served on its global board of directors for two terms, and now sits on the 100 Women in Fintech committee. Diane studied figurative painting at San Jose State University, where she taught herself to code. She went on to build a career as a global technology evangelist for 3D animation in the entertainment industry. Her work has taken her to over 50 countries, with longer stints in London, Paris, Tokyo, and Montreal. She speaks regularly at industry conferences and has guest lectured at numerous universities around the world.',
         linkedin: 'https://www.linkedin.com/in/diane-schrader/'
     },
     sara: {
@@ -38,7 +39,21 @@ function openModal(person) {
     const data = teamData[person];
     if (data) {
         modalTitle.textContent = data.name;
-        modalDescription.textContent = data.description;
+        
+        // Create description with read more functionality
+        const shortDesc = data.description;
+        const fullDesc = data.fullDescription || data.description;
+        
+        if (fullDesc && fullDesc !== shortDesc) {
+            modalDescription.innerHTML = `
+                <span class="short-description">${shortDesc}</span>
+                <span class="full-description" style="display: none;">${fullDesc}</span>
+                <button class="read-more-btn" onclick="toggleDescription(event)">Read More</button>
+            `;
+        } else {
+            modalDescription.textContent = data.description;
+        }
+        
         modalLinkedin.href = data.linkedin;
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -63,6 +78,24 @@ document.addEventListener('keydown', (event) => {
         closeModal();
     }
 });
+
+// Toggle description function
+function toggleDescription(event) {
+    event.preventDefault();
+    const button = event.target;
+    const shortDesc = button.parentElement.querySelector('.short-description');
+    const fullDesc = button.parentElement.querySelector('.full-description');
+    
+    if (fullDesc.style.display === 'none') {
+        shortDesc.style.display = 'none';
+        fullDesc.style.display = 'inline';
+        button.textContent = 'Read Less';
+    } else {
+        shortDesc.style.display = 'inline';
+        fullDesc.style.display = 'none';
+        button.textContent = 'Read More';
+    }
+}
 
 // Newsletter subscription
 document.querySelector('.newsletter-btn').addEventListener('click', (e) => {

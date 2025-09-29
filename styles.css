@@ -524,6 +524,24 @@ body {
     background-color: #005885;
 }
 
+.read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #cc3333;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
