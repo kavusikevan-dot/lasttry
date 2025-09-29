@@ -282,7 +282,7 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 60px;
     margin-bottom: 40px;
 }
@@ -292,7 +292,8 @@ body {
 }
 
 .contact-section,
-.social-section {
+.social-section,
+.logo-section {
     min-width: 200px;
 }
 
@@ -392,6 +393,41 @@ body {
 
 .linkedin-btn:hover {
     background-color: #005885;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-red-circle {
+    width: 20px;
+    height: 20px;
+    background-image: url('images/big red circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-logo-image {
+    height: 30px;
+    width: auto;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #cccccc;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 .footer-bottom {
