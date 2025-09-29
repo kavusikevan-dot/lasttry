@@ -262,10 +262,27 @@ body {
 }
 
 .newsletter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr auto;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 15px;
+}
+
+.newsletter-row {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-row.names {
+    flex: 1;
+}
+
+.newsletter-row.email-submit {
+    align-items: center;
+}
+
+.newsletter-row.email-submit .newsletter-input {
+    flex: 1;
 }
 
 .newsletter-input,
@@ -435,8 +452,21 @@ body {
     }
     
     .newsletter {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 15px;
+    }
+    
+    .newsletter-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .newsletter-row.names {
+        flex-direction: column;
+    }
+    
+    .newsletter-row.email-submit {
+        flex-direction: column;
     }
 
     .modal-content {
