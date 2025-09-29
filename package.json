@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx serve -s . -l 3000",
-    "start": "npx serve -s . -l 3000"
+    "start": "npx serve -s . -l 3000",
+    "build": "mkdir -p dist && cp -R index.html styles.css script.js images dist/"
   },
   "keywords": ["climate", "website"],
   "author": "",
