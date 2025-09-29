@@ -24,7 +24,7 @@ const modalLinkedin = document.getElementById('modal-linkedin');
 const teamData = {
     diane: {
         name: 'Diane Schrader',
-        description: 'This is Diane Schrader\'s description',
+        description: 'Diane Schrader is deeply engaged in institutional climate finance and is embedded in the climate startup ecosystem at Stanford. She advises startups, serves on several boards, and actively contributes to advancing renewable energy solutions, including hands-on work with solar installation.',
         linkedin: 'https://www.linkedin.com/in/diane-schrader/'
     },
     sara: {
